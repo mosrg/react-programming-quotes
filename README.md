@@ -1,4 +1,4 @@
-Project to consume a REST API of [Programming Quotes](https://programming-quotes-api.herokuapp.com/index.html), using the JavaScript library [React JS](hhttps://reactjs.org/docs/getting-started.html), the framework for React [NextJS](https://nextjs.org/docs/getting-started), and the React UI library [Ant Design](https://ant.design/docs/react/introduce).
+Project to consume a REST API of [Programming Quotes](https://programming-quotes-api.herokuapp.com/index.html), using the JavaScript library [React JS](https://reactjs.org/docs/getting-started.html), the React framework [NextJS](https://nextjs.org/docs/getting-started), and the React UI library [Ant Design](https://ant.design/docs/react/introduce).
 
 
 To test it, run the development server:
