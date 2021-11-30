@@ -1,10 +1,10 @@
-//import { Typography } from "antd"
-import { Table, Typography } from 'antd';
+import { Button, Table, Typography } from 'antd';
 import Head from 'next/head';
+import { render } from 'react-dom';
 
 const { Title } = Typography;
 
-function QuotesList({quotes}) {
+export default function QuotesList({quotes}) {
     const columns = [
         {
             title: 'ID',
@@ -14,7 +14,8 @@ function QuotesList({quotes}) {
         {
             title: 'Author',
             dataIndex: 'author',
-            key: 'author'
+            key: 'author',
+            render: author => <a href={`/quotes/author/${encodeURIComponent(author)}`}>{author}</a>
         },
         {
             title: 'Quote',
@@ -37,7 +38,12 @@ function QuotesList({quotes}) {
 }
 
 export async function getStaticProps() {
-    const response = await fetch("https://programming-quotes-api.herokuapp.com/Quotes")
+    const response = await fetch("https://programming-quotes-api.herokuapp.com/Quotes", {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
     const quotes = await response.json();
 
     return {
@@ -46,6 +52,3 @@ export async function getStaticProps() {
         }
     }
 }
-
-
-export default QuotesList

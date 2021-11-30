@@ -17,7 +17,7 @@ export default function Home() {
       <Head>
         <title>Programming Quotes</title>
       </Head>
-      <Link href="/quotes/quotes-list" passHref>
+      <Link href="/quotes/" passHref>
         <RedirButton />
       </Link>
       
