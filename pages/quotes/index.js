@@ -1,5 +1,6 @@
 import { Button, Table, Typography } from 'antd';
 import Head from 'next/head';
+import Link from 'next/link';
 import { render } from 'react-dom';
 
 const { Title } = Typography;
@@ -32,6 +33,12 @@ export default function QuotesList({quotes}) {
             <Title level={3}>
                 Quotes of well-known computer scientists, programmers, scientists, and other public figures.
             </Title>
+            <Link href="/quotes/add_quote">
+                <Button type="primary" shape="round">
+                    Add new quote
+                </Button>
+            </Link>
+            
             <Table columns={columns} dataSource={quotes} rowKey='id'/>
         </>
     )
